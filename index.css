@@ -155,3 +155,6 @@ hr {
 .flipx {
   transform: scaleX(-1);
 }
+.flip-selected {
+  background-color: #92920b;
+}

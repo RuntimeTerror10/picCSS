@@ -71,10 +71,10 @@ skewyBtn.addEventListener("click", function () {
 /*flip*/
 flipXBtn.addEventListener("click", function () {
   imgDiv.classList.toggle("flipx");
-  flipXBtn.style.background = "#92920b";
+  flipXBtn.classList.toggle("flip-selected");
 });
 
 flipYBtn.addEventListener("click", function () {
   imgdiv.classList.toggle("flipy");
-  flipYBtn.style.background = "#92920b";
+  flipYBtn.classList.toggle("flip-selected");
 });
