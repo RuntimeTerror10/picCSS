@@ -101,6 +101,9 @@ body {
 .outpic {
   width: 100%;
 }
+.out {
+  transform: scaleX(-1);
+}
 
 .basic-adjust {
   color: rgb(194, 194, 10);
@@ -118,6 +121,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 50px;
 }
 .input {
   width: 60%;
@@ -125,6 +129,7 @@ body {
 }
 .apply-btn {
   width: 50%;
+  padding: 10px;
   margin-left: 25%;
   margin-top: 20px;
   background: rgb(194, 194, 10);
@@ -132,10 +137,21 @@ body {
   font-size: 0.9rem;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 hr {
   width: 80%;
   color: white;
   opacity: 0.7;
   margin-top: 10px;
+}
+.align-btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.flipy {
+  transform: scaleY(-1);
+}
+.flipx {
+  transform: scaleX(-1);
 }

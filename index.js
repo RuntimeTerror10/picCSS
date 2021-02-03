@@ -1,6 +1,10 @@
 const closeBtn = document.querySelector(".close-btn");
 const controlDiv = document.querySelector(".controls-div");
 const editorIcon = document.querySelector(".editor-icon");
+const imgDiv = document.querySelector(".disp-img");
+const imgdiv = document.querySelector(".disp-image");
+const flipXBtn = document.querySelector(".flipX-apply");
+const flipYBtn = document.querySelector(".flipY-apply");
 
 var rotateValue = 0;
 var scaleValue = 1;
@@ -62,4 +66,15 @@ skewyBtn.addEventListener("click", function () {
   skewYValue = skewyVal;
   console.log(skewYValue);
   img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
+});
+
+/*flip*/
+flipXBtn.addEventListener("click", function () {
+  imgDiv.classList.toggle("flipx");
+  flipXBtn.style.background = "#92920b";
+});
+
+flipYBtn.addEventListener("click", function () {
+  imgdiv.classList.toggle("flipy");
+  flipYBtn.style.background = "#92920b";
 });
