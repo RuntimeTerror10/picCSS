@@ -1,3 +1,4 @@
+var img = document.querySelector(".outpic");
 const closeBtn = document.querySelector(".close-btn");
 const controlDiv = document.querySelector(".controls-div");
 const editorIcon = document.querySelector(".editor-icon");
@@ -5,6 +6,7 @@ const imgDiv = document.querySelector(".disp-img");
 const imgdiv = document.querySelector(".disp-image");
 const flipXBtn = document.querySelector(".flipX-apply");
 const flipYBtn = document.querySelector(".flipY-apply");
+const borderBtn = document.querySelector(".border-apply");
 
 var rotateValue = 0;
 var scaleValue = 1;
@@ -19,7 +21,7 @@ editorIcon.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-active");
   controlDiv.classList.remove("controls-div-inactive");
 });
-var img = document.querySelector(".outpic");
+
 /*opacity*/
 const opacityBtn = document.querySelector(".opacity-apply");
 opacityBtn.addEventListener("click", function () {
@@ -77,4 +79,37 @@ flipXBtn.addEventListener("click", function () {
 flipYBtn.addEventListener("click", function () {
   imgdiv.classList.toggle("flipy");
   flipYBtn.classList.toggle("flip-selected");
+});
+
+/*border*/
+
+borderBtn.addEventListener("click", function () {
+  const solid = document.querySelector("#solid");
+  const dotted = document.querySelector("#dotted");
+  const double = document.querySelector("#double");
+  const dashed = document.querySelector("#dashed");
+  const groove = document.querySelector("#groove");
+
+  var borderWidth = document.querySelector(".border-width-input");
+  var borderColor = document.querySelector(".border-color-input");
+  var borderRadius = document.querySelector(".radius-input");
+  var radius = borderRadius.value;
+  var colorVal = borderColor.value;
+  var widthVal = borderWidth.value;
+  if (solid.checked == true) {
+    img.style.borderStyle = "solid";
+  } else if (dotted.checked == true) {
+    img.style.borderStyle = "dotted";
+  } else if (dashed.checked == true) {
+    img.style.borderStyle = "dashed";
+  } else if (double.checked == true) {
+    img.style.borderStyle = "double";
+  } else if (groove.checked == true) {
+    img.style.borderStyle = "groove";
+  } else {
+    img.style.borderStyle = "none";
+  }
+  img.style.borderWidth = `${widthVal}px`;
+  img.style.borderColor = colorVal;
+  img.style.borderRadius = `${radius}%`;
 });

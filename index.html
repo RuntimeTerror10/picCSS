@@ -122,6 +122,54 @@
       <h2 class="basic-adjust">Flip</h2>
       <button class="apply-btn flipX-apply">Flip horizontally</button>
       <button class="apply-btn flipY-apply align-btn">Flip vertically</button>
+      <hr />
+      <h2 class="basic-adjust">Border</h2>
+      <h3 class="prop">Border width</h3>
+      <input
+        type="range"
+        min="0"
+        max="15"
+        step="1"
+        value="0"
+        class="border-width-input input"
+      />
+      <h3 class="prop">Border color</h3>
+      <input type="color" class="border-color-input" />
+      <h3 class="prop">Border style</h3>
+      <div class="style-div">
+        <div>
+          <span class="style">solid</span>
+          <input type="radio" class="border-style" name="style" id="solid" />
+        </div>
+        <div>
+          <span class="style">dashed</span>
+          <input type="radio" class="border-style" name="style" id="dashed" />
+        </div>
+        <div>
+          <span class="style">dotted</span>
+          <input type="radio" class="border-style" name="style" id="dotted" />
+        </div>
+        <div>
+          <span class="style">double</span>
+          <input type="radio" class="border-style" name="style" id="double" />
+        </div>
+        <div>
+          <span class="style">groove</span>
+          <input type="radio" class="border-style" name="style" id="groove" />
+        </div>
+      </div>
+      <br />
+      <h3 class="prop">Border-radius</h3>
+      <input
+        type="range"
+        min="0"
+        max="50"
+        step="2"
+        value="0"
+        class="radius-input input"
+      />
+
+      <button class="apply-btn border-apply">Apply border</button>
     </div>
     <script src="index.js"></script>
     <script src="img-disp.js"></script>

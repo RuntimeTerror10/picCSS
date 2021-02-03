@@ -101,20 +101,17 @@ body {
 .outpic {
   width: 100%;
 }
-.out {
-  transform: scaleX(-1);
-}
 
 .basic-adjust {
   color: rgb(194, 194, 10);
   font-family: "Roboto Slab";
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 10px 10px;
 }
 .prop {
   text-align: center;
   font-family: "Roboto Slab";
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: rgb(194, 194, 10);
 }
 .prop-div {
@@ -157,4 +154,21 @@ hr {
 }
 .flip-selected {
   background-color: #92920b;
+}
+.style {
+  color: rgb(194, 194, 10);
+  font-family: "Roboto Slab";
+  font-size: 1rem;
+}
+.style-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.style-div div {
+  padding: 5px 0;
+}
+.border-color-input {
+  display: block;
+  margin: 0 auto;
 }
