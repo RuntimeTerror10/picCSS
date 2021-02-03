@@ -33,6 +33,7 @@ body {
   bottom: 0;
   right: -338.42px;
   background: #0a043c;
+  overflow-y: scroll;
   transition: 0.25s ease-in-out;
 }
 .controls-div-inactive {
@@ -96,9 +97,11 @@ body {
   overflow-y: hidden;
   margin-top: 80px;
 }
+
 .outpic {
   width: 100%;
 }
+
 .basic-adjust {
   color: rgb(194, 194, 10);
   font-family: "Roboto Slab";

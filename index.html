@@ -1,60 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/6f41a76c28.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6f41a76c28.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>picCSS</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="social-link-div">
-        <i class="fab fa-github git-icon"></i>
+      <i class="fab fa-github git-icon"></i>
     </div>
     <div class="editor-icon-div">
-        <i class="fas fa-sliders-h editor-icon"></i>
+      <i class="fas fa-sliders-h editor-icon"></i>
     </div>
     <div class="logo-div">
-       <a href="index.html"><img src="images/picCSS logo.png" alt="picCSS logo" class="logo"></a>
+      <a href="index.html"
+        ><img src="images/picCSS logo.png" alt="picCSS logo" class="logo"
+      /></a>
     </div>
     <div class="disp-img">
-        <img class="outpic" id="output" />
+      <img class="outpic" id="output" />
     </div>
     <div class="upload-div">
-        <div>
-            <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
-            <p class="up-text"><label for="file" class="upload">Upload Image<i class="fas fa-upload up-icon"></i></label></p>
-        </div>
+      <div>
+        <p>
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            id="file"
+            onchange="loadFile(event)"
+            style="display: none"
+          />
+        </p>
+        <p class="up-text">
+          <label for="file" class="upload"
+            >Upload Image<i class="fas fa-upload up-icon"></i
+          ></label>
+        </p>
+      </div>
     </div>
     <div class="controls-div">
-        <p class="close-btn">X</p>
-        <h2 class="control-head">Editor Panel</h2>
-        <h2 class="basic-adjust">Basic Filters</h2>
-        <div class="prop-div">
+      <p class="close-btn">X</p>
+      <h2 class="control-head">Editor Panel</h2>
+      <h2 class="basic-adjust">Basic Filters</h2>
+      <div class="prop-div">
         <h3 class="prop">Opacity</h3>
-        <input type="range" min="0" max="1" step="0.1" value="1" class="opacity-input input">
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.1"
+          value="1"
+          class="opacity-input input"
+        />
         <button class="apply-btn opacity-apply">Apply opacity</button>
-        </div>
-        <hr/>
-                <h2 class="basic-adjust">Transform</h2>
-                <div class="prop-div">
-                    <h3 class="prop">Rotate</h3>
-                    <input type="range" min="0" max="360" step="0.1" value="0" class="rotate-input input">
-                    <button class="apply-btn rotate-apply">Apply rotation</button>
-                </div>
-                <div class="prop-div">
-                    <h3 class="prop">Scale</h3>
-                    <input type="range" min="0.5" max="3" step="0.1" value="1" class="scale-input input">
-                    <button class="apply-btn scale-apply">Apply scale</button>
-                </div>
-                
-
-
+      </div>
+      <hr />
+      <h2 class="basic-adjust">Transform</h2>
+      <div class="prop-div">
+        <h3 class="prop">Rotate</h3>
+        <input
+          type="range"
+          min="0"
+          max="360"
+          step="0.1"
+          value="0"
+          class="rotate-input input"
+        />
+        <button class="apply-btn rotate-apply">Apply rotation</button>
+      </div>
+      <div class="prop-div">
+        <h3 class="prop">Scale</h3>
+        <input
+          type="range"
+          min="0.5"
+          max="3"
+          step="0.1"
+          value="1"
+          class="scale-input input"
+        />
+        <button class="apply-btn scale-apply">Apply scale</button>
+      </div>
+      <div class="prop-div">
+        <h3 class="prop">SkewX</h3>
+        <input
+          type="range"
+          min="-40"
+          max="40"
+          step="2"
+          value="0"
+          class="skewx-input input"
+        />
+        <button class="apply-btn skewx-apply">Apply skewX</button>
+      </div>
+      <div class="prop-div">
+        <h3 class="prop">SkewY</h3>
+        <input
+          type="range"
+          min="-40"
+          max="40"
+          step="2"
+          value="0"
+          class="skewy-input input"
+        />
+        <button class="apply-btn skewy-apply">Apply skewY</button>
+      </div>
+      <hr />
+      <h2 class="basic-adjust">Gradient</h2>
     </div>
     <script src="index.js"></script>
     <script src="img-disp.js"></script>
-</body>
+  </body>
 </html>
