@@ -1,6 +1,6 @@
 body {
   background: #03506f;
-  width: 100%;
+
   overflow-x: hidden;
 }
 .logo-div {
@@ -27,7 +27,7 @@ body {
   cursor: pointer;
 }
 .controls-div {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: -338.42px;
