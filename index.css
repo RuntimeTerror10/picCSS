@@ -2,6 +2,7 @@ body {
   background: #03506f;
 
   overflow-x: hidden;
+  z-index: 1;
 }
 .logo-div {
   display: flex;
@@ -41,10 +42,11 @@ body {
   right: 0;
 }
 .control-head {
+  font-size: 1.3rem;
   color: rgb(194, 194, 10);
   font-family: "Roboto Slab";
   text-align: center;
-  padding: 10px 100px;
+  padding: 10px 85px;
 }
 .close-btn {
   position: absolute;
@@ -86,6 +88,51 @@ body {
 .up-icon {
   padding-left: 30px;
 }
-.display-img {
-  padding-left: 30px;
+.disp-img {
+  width: 60%;
+  margin: 0 auto;
+  padding-right: 50px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 80px;
+}
+.outpic {
+  width: 100%;
+}
+.basic-adjust {
+  color: rgb(194, 194, 10);
+  font-family: "Roboto Slab";
+  font-size: 1.2rem;
+  padding: 10px 10px;
+}
+.prop {
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 1rem;
+  color: rgb(194, 194, 10);
+}
+.prop-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.input {
+  width: 60%;
+  margin-left: 20%;
+}
+.apply-btn {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 20px;
+  background: rgb(194, 194, 10);
+  font-family: "Roboto Slab";
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+}
+hr {
+  width: 80%;
+  color: white;
+  opacity: 0.7;
+  margin-top: 10px;
 }

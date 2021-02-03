@@ -20,8 +20,8 @@
     <div class="logo-div">
        <a href="index.html"><img src="images/picCSS logo.png" alt="picCSS logo" class="logo"></a>
     </div>
-    <div class="display-img">
-        <p><img class="outpic" id="output" width="55%" /></p>
+    <div class="disp-img">
+        <img class="outpic" id="output" />
     </div>
     <div class="upload-div">
         <div>
@@ -32,6 +32,27 @@
     <div class="controls-div">
         <p class="close-btn">X</p>
         <h2 class="control-head">Editor Panel</h2>
+        <h2 class="basic-adjust">Basic Filters</h2>
+        <div class="prop-div">
+        <h3 class="prop">Opacity</h3>
+        <input type="range" min="0" max="1" step="0.1" value="1" class="opacity-input input">
+        <button class="apply-btn opacity-apply">Apply opacity</button>
+        </div>
+        <hr/>
+                <h2 class="basic-adjust">Transform</h2>
+                <div class="prop-div">
+                    <h3 class="prop">Rotate</h3>
+                    <input type="range" min="0" max="360" step="0.1" value="0" class="rotate-input input">
+                    <button class="apply-btn rotate-apply">Apply rotation</button>
+                </div>
+                <div class="prop-div">
+                    <h3 class="prop">Scale</h3>
+                    <input type="range" min="0.5" max="3" step="0.1" value="1" class="scale-input input">
+                    <button class="apply-btn scale-apply">Apply scale</button>
+                </div>
+                
+
+
     </div>
     <script src="index.js"></script>
     <script src="img-disp.js"></script>
