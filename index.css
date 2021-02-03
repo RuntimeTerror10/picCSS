@@ -1,0 +1,91 @@
+body {
+  background: #03506f;
+  width: 100%;
+  overflow-x: hidden;
+}
+.logo-div {
+  display: flex;
+  justify-content: center;
+}
+.social-link-div {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.git-icon {
+  font-size: 2.5rem;
+  color: rgb(194, 194, 10);
+}
+.editor-icon-div {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+.editor-icon {
+  font-size: 2.3rem;
+  color: rgb(194, 194, 10);
+  cursor: pointer;
+}
+.controls-div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -338.42px;
+  background: #0a043c;
+  transition: 0.25s ease-in-out;
+}
+.controls-div-inactive {
+  right: -338.42px;
+}
+.controls-div-active {
+  right: 0;
+}
+.control-head {
+  color: rgb(194, 194, 10);
+  font-family: "Roboto Slab";
+  text-align: center;
+  padding: 10px 100px;
+}
+.close-btn {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  color: rgb(194, 194, 10);
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-family: "Roboto Slab";
+}
+.upload-div {
+  display: block;
+  margin-top: 80px;
+  animation: highlight 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes highlight {
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.up-text {
+  text-align: center;
+}
+.upload {
+  color: rgb(194, 194, 10);
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Roboto Slab";
+}
+
+.up-icon {
+  padding-left: 30px;
+}
+.display-img {
+  padding-left: 30px;
+}
