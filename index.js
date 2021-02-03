@@ -36,6 +36,7 @@ rotateBtn.addEventListener("click", function () {
   var rotateInput = document.querySelector(".rotate-input");
   var rotateVal = rotateInput.value;
   rotateValue = rotateVal;
+  console.log(rotateValue);
   img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
 });
 
@@ -112,4 +113,7 @@ borderBtn.addEventListener("click", function () {
   img.style.borderWidth = `${widthVal}px`;
   img.style.borderColor = colorVal;
   img.style.borderRadius = `${radius}%`;
+  console.log(widthVal);
+  console.log(colorVal);
+  console.log(radius);
 });
