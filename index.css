@@ -1,6 +1,5 @@
 body {
   background: #03506f;
-
   overflow-x: hidden;
   z-index: 1;
 }
@@ -43,11 +42,11 @@ body {
   right: 0;
 }
 .control-head {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: rgb(194, 194, 10);
   font-family: "Roboto Slab";
   text-align: center;
-  padding: 10px 85px;
+  padding: 10px 70px;
 }
 .close-btn {
   position: absolute;
@@ -105,13 +104,13 @@ body {
 .basic-adjust {
   color: rgb(194, 194, 10);
   font-family: "Roboto Slab";
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 10px 10px;
 }
 .prop {
   text-align: center;
   font-family: "Roboto Slab";
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: rgb(194, 194, 10);
 }
 .prop-div {
