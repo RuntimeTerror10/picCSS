@@ -8,10 +8,15 @@ const flipXBtn = document.querySelector(".flipX-apply");
 const flipYBtn = document.querySelector(".flipY-apply");
 const borderBtn = document.querySelector(".border-apply");
 
+/*transfrom default values*/
 var rotateValue = 0;
 var scaleValue = 1;
 var skewXValue = 0;
 var skewYValue = 0;
+
+/*filter default values*/
+var contrastValue = 100;
+var grayValue = 0;
 
 closeBtn.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-inactive");
@@ -21,7 +26,14 @@ editorIcon.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-active");
   controlDiv.classList.remove("controls-div-inactive");
 });
-
+/*contrast*/
+const contrastBtn = document.querySelector(".contrast-apply");
+contrastBtn.addEventListener("click", function () {
+  var contrastInput = document.querySelector(".contrast-input");
+  var contrastVal = contrastInput.value;
+  contrastValue = contrastVal;
+  img.style.filter = `contrast(${contrastValue}%)`;
+});
 /*opacity*/
 const opacityBtn = document.querySelector(".opacity-apply");
 opacityBtn.addEventListener("click", function () {
