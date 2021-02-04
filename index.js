@@ -22,6 +22,7 @@ var grayValue = 0;
 var saturateValue = 100;
 var blurValue = 0;
 var brightValue = 100;
+var sepiaValue = 0;
 
 closeBtn.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-inactive");
@@ -39,7 +40,7 @@ brightBtn.addEventListener("click", function () {
   var brightInput = document.querySelector(".bright-input");
   var brightVal = brightInput.value;
   brightValue = brightVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
 });
 
 /*contrast*/
@@ -49,7 +50,7 @@ contrastBtn.addEventListener("click", function () {
   var contrastInput = document.querySelector(".contrast-input");
   var contrastVal = contrastInput.value;
   contrastValue = contrastVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
 });
 
 /*Grayscale*/
@@ -59,7 +60,7 @@ grayBtn.addEventListener("click", function () {
   var grayInput = document.querySelector(".gray-input");
   var grayVal = grayInput.value;
   grayValue = grayVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
 });
 
 /*blur*/
@@ -69,7 +70,16 @@ blurBtn.addEventListener("click", function () {
   var blurInput = document.querySelector(".blur-input");
   var blurVal = blurInput.value;
   blurValue = blurVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
+});
+
+/*sepia*/
+const sepiaBtn = document.querySelector(".sepia-apply");
+sepiaBtn.addEventListener("click", function () {
+  var sepiaInput = document.querySelector(".sepia-input");
+  var sepiaVal = sepiaInput.value;
+  sepiaValue = sepiaVal;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
 });
 
 /*opacity*/
@@ -100,8 +110,9 @@ saturateBtn.addEventListener("click", function () {
   var saturateInput = document.querySelector(".saturate-input");
   var saturateVal = saturateInput.value;
   saturateValue = saturateVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
 });
+
 /*scale*/
 
 const scaleBtn = document.querySelector(".scale-apply");
@@ -114,6 +125,7 @@ scaleBtn.addEventListener("click", function () {
 });
 
 /*skewX*/
+
 const skewxBtn = document.querySelector(".skewx-apply");
 skewxBtn.addEventListener("click", function () {
   var skewxInput = document.querySelector(".skewx-input");
@@ -124,6 +136,7 @@ skewxBtn.addEventListener("click", function () {
 });
 
 /*skewY*/
+
 const skewyBtn = document.querySelector(".skewy-apply");
 skewyBtn.addEventListener("click", function () {
   var skewyInput = document.querySelector(".skewy-input");
@@ -134,6 +147,7 @@ skewyBtn.addEventListener("click", function () {
 });
 
 /*flip*/
+
 flipXBtn.addEventListener("click", function () {
   imgDiv.classList.toggle("flipx");
   flipXBtn.classList.toggle("flip-selected");
