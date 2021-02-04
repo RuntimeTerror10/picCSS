@@ -26,15 +26,28 @@ editorIcon.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-active");
   controlDiv.classList.remove("controls-div-inactive");
 });
+
 /*contrast*/
+
 const contrastBtn = document.querySelector(".contrast-apply");
 contrastBtn.addEventListener("click", function () {
   var contrastInput = document.querySelector(".contrast-input");
   var contrastVal = contrastInput.value;
   contrastValue = contrastVal;
-  img.style.filter = `contrast(${contrastValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)`;
+});
+
+/*Grayscale*/
+
+const grayBtn = document.querySelector(".gray-apply");
+grayBtn.addEventListener("click", function () {
+  var grayInput = document.querySelector(".gray-input");
+  var grayVal = grayInput.value;
+  grayValue = grayVal;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)`;
 });
 /*opacity*/
+
 const opacityBtn = document.querySelector(".opacity-apply");
 opacityBtn.addEventListener("click", function () {
   var opacityInput = document.querySelector(".opacity-input");
@@ -42,7 +55,9 @@ opacityBtn.addEventListener("click", function () {
   console.log(opVal);
   img.style.opacity = opVal;
 });
+
 /*rotate*/
+
 const rotateBtn = document.querySelector(".rotate-apply");
 rotateBtn.addEventListener("click", function () {
   var rotateInput = document.querySelector(".rotate-input");
