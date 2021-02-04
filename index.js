@@ -17,6 +17,8 @@ var skewYValue = 0;
 /*filter default values*/
 var contrastValue = 100;
 var grayValue = 0;
+var saturateValue = 100;
+var blurValue = 0;
 
 closeBtn.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-inactive");
@@ -34,7 +36,7 @@ contrastBtn.addEventListener("click", function () {
   var contrastInput = document.querySelector(".contrast-input");
   var contrastVal = contrastInput.value;
   contrastValue = contrastVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)`;
 });
 
 /*Grayscale*/
@@ -44,8 +46,19 @@ grayBtn.addEventListener("click", function () {
   var grayInput = document.querySelector(".gray-input");
   var grayVal = grayInput.value;
   grayValue = grayVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)`;
 });
+
+/*blur*/
+
+const blurBtn = document.querySelector(".blur-apply");
+blurBtn.addEventListener("click", function () {
+  var blurInput = document.querySelector(".blur-input");
+  var blurVal = blurInput.value;
+  blurValue = blurVal;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)`;
+});
+
 /*opacity*/
 
 const opacityBtn = document.querySelector(".opacity-apply");
@@ -67,6 +80,15 @@ rotateBtn.addEventListener("click", function () {
   img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
 });
 
+/*saturation*/
+
+const saturateBtn = document.querySelector(".saturate-apply");
+saturateBtn.addEventListener("click", function () {
+  var saturateInput = document.querySelector(".saturate-input");
+  var saturateVal = saturateInput.value;
+  saturateValue = saturateVal;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)`;
+});
 /*scale*/
 
 const scaleBtn = document.querySelector(".scale-apply");
