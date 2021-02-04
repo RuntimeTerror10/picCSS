@@ -9,16 +9,19 @@ const flipYBtn = document.querySelector(".flipY-apply");
 const borderBtn = document.querySelector(".border-apply");
 
 /*transfrom default values*/
+
 var rotateValue = 0;
 var scaleValue = 1;
 var skewXValue = 0;
 var skewYValue = 0;
 
 /*filter default values*/
+
 var contrastValue = 100;
 var grayValue = 0;
 var saturateValue = 100;
 var blurValue = 0;
+var brightValue = 100;
 
 closeBtn.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-inactive");
@@ -29,6 +32,16 @@ editorIcon.addEventListener("click", function () {
   controlDiv.classList.remove("controls-div-inactive");
 });
 
+/*Brightness*/
+
+const brightBtn = document.querySelector(".bright-apply");
+brightBtn.addEventListener("click", function () {
+  var brightInput = document.querySelector(".bright-input");
+  var brightVal = brightInput.value;
+  brightValue = brightVal;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
+});
+
 /*contrast*/
 
 const contrastBtn = document.querySelector(".contrast-apply");
@@ -36,7 +49,7 @@ contrastBtn.addEventListener("click", function () {
   var contrastInput = document.querySelector(".contrast-input");
   var contrastVal = contrastInput.value;
   contrastValue = contrastVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
 });
 
 /*Grayscale*/
@@ -46,7 +59,7 @@ grayBtn.addEventListener("click", function () {
   var grayInput = document.querySelector(".gray-input");
   var grayVal = grayInput.value;
   grayValue = grayVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
 });
 
 /*blur*/
@@ -56,7 +69,7 @@ blurBtn.addEventListener("click", function () {
   var blurInput = document.querySelector(".blur-input");
   var blurVal = blurInput.value;
   blurValue = blurVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
 });
 
 /*opacity*/
@@ -87,7 +100,7 @@ saturateBtn.addEventListener("click", function () {
   var saturateInput = document.querySelector(".saturate-input");
   var saturateVal = saturateInput.value;
   saturateValue = saturateVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)`;
 });
 /*scale*/
 
