@@ -7,6 +7,7 @@ const imgdiv = document.querySelector(".disp-image");
 const flipXBtn = document.querySelector(".flipX-apply");
 const flipYBtn = document.querySelector(".flipY-apply");
 const borderBtn = document.querySelector(".border-apply");
+const resetBtn = document.querySelector(".reset");
 
 /*transfrom default values*/
 
@@ -25,6 +26,7 @@ var brightValue = 100;
 var sepiaValue = 0;
 var hueValue = 0;
 var invertValue = 0;
+var opacityValue = 1;
 
 closeBtn.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-inactive");
@@ -121,8 +123,8 @@ const opacityBtn = document.querySelector(".opacity-apply");
 opacityBtn.addEventListener("click", function () {
   var opacityInput = document.querySelector(".opacity-input");
   var opVal = opacityInput.value;
-  console.log(opVal);
-  img.style.opacity = opVal;
+  opacityValue = opVal;
+  img.style.opacity = opacityValue;
 });
 
 /*rotate*/
@@ -132,7 +134,6 @@ rotateBtn.addEventListener("click", function () {
   var rotateInput = document.querySelector(".rotate-input");
   var rotateVal = rotateInput.value;
   rotateValue = rotateVal;
-  console.log(rotateValue);
   img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
 });
 
@@ -143,7 +144,6 @@ scaleBtn.addEventListener("click", function () {
   var scaleInput = document.querySelector(".scale-input");
   var scaleVal = scaleInput.value;
   scaleValue = scaleVal;
-  console.log(scaleValue);
   img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
 });
 
@@ -154,7 +154,6 @@ skewxBtn.addEventListener("click", function () {
   var skewxInput = document.querySelector(".skewx-input");
   var skewxVal = skewxInput.value;
   skewXValue = skewxVal;
-  console.log(skewXValue);
   img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
 });
 
@@ -165,7 +164,6 @@ skewyBtn.addEventListener("click", function () {
   var skewyInput = document.querySelector(".skewy-input");
   var skewyVal = skewyInput.value;
   skewYValue = skewyVal;
-  console.log(skewYValue);
   img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
 });
 
@@ -212,7 +210,66 @@ borderBtn.addEventListener("click", function () {
   img.style.borderWidth = `${widthVal}px`;
   img.style.borderColor = colorVal;
   img.style.borderRadius = `${radius}%`;
-  console.log(widthVal);
-  console.log(colorVal);
-  console.log(radius);
+});
+
+/*reset*/
+resetBtn.addEventListener("click", function () {
+  imgDiv.classList.toggle("flipx");
+  flipXBtn.classList.toggle("flip-selected");
+  imgdiv.classList.toggle("flipy");
+  flipYBtn.classList.toggle("flip-selected");
+  rotateValue = 0;
+  var rotateinput = (document.querySelector(
+    ".rotate-input"
+  ).value = rotateValue);
+
+  scaleValue = 1;
+  var scaleinput = (document.querySelector(".scale-input").value = scaleValue);
+
+  skewXValue = 0;
+  var skewxinput = (document.querySelector(".skewx-input").value = skewXValue);
+
+  skewYValue = 0;
+  var skewyinput = (document.querySelector(".skewy-input").value = skewYValue);
+
+  contrastValue = 100;
+  var contrastinput = (document.querySelector(
+    ".contrast-input"
+  ).value = contrastValue);
+
+  grayValue = 0;
+  var grayinput = (document.querySelector(".gray-input").value = grayValue);
+
+  saturateValue = 100;
+  var saturateinput = (document.querySelector(
+    ".saturate-input"
+  ).value = saturateValue);
+
+  blurValue = 0;
+  var blurinput = (document.querySelector(".blur-input").value = blurValue);
+
+  brightValue = 100;
+  var brightinput = (document.querySelector(
+    ".bright-input"
+  ).value = brightValue);
+
+  sepiaValue = 0;
+  var sepiainput = (document.querySelector(".sepia-input").value = sepiaValue);
+
+  hueValue = 0;
+  var hueinput = (document.querySelector(".hue-input").value = hueValue);
+
+  invertValue = 0;
+  var invertinput = (document.querySelector(
+    ".invert-input"
+  ).value = invertValue);
+
+  opacityValue = 1;
+  var opacityinput = (document.querySelector(
+    ".opacity-input"
+  ).value = opacityValue);
+
+  img.style.opacity = opacityValue;
+  img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
 });
