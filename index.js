@@ -23,6 +23,8 @@ var saturateValue = 100;
 var blurValue = 0;
 var brightValue = 100;
 var sepiaValue = 0;
+var hueValue = 0;
+var invertValue = 0;
 
 closeBtn.addEventListener("click", function () {
   controlDiv.classList.add("controls-div-inactive");
@@ -40,7 +42,7 @@ brightBtn.addEventListener("click", function () {
   var brightInput = document.querySelector(".bright-input");
   var brightVal = brightInput.value;
   brightValue = brightVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
 });
 
 /*contrast*/
@@ -50,7 +52,17 @@ contrastBtn.addEventListener("click", function () {
   var contrastInput = document.querySelector(".contrast-input");
   var contrastVal = contrastInput.value;
   contrastValue = contrastVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
+});
+
+/*saturation*/
+
+const saturateBtn = document.querySelector(".saturate-apply");
+saturateBtn.addEventListener("click", function () {
+  var saturateInput = document.querySelector(".saturate-input");
+  var saturateVal = saturateInput.value;
+  saturateValue = saturateVal;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
 });
 
 /*Grayscale*/
@@ -60,7 +72,7 @@ grayBtn.addEventListener("click", function () {
   var grayInput = document.querySelector(".gray-input");
   var grayVal = grayInput.value;
   grayValue = grayVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
 });
 
 /*blur*/
@@ -70,16 +82,37 @@ blurBtn.addEventListener("click", function () {
   var blurInput = document.querySelector(".blur-input");
   var blurVal = blurInput.value;
   blurValue = blurVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
+});
+
+/*invert*/
+
+const invertBtn = document.querySelector(".invert-apply");
+invertBtn.addEventListener("click", function () {
+  var invertInput = document.querySelector(".invert-input");
+  var invertVal = invertInput.value;
+  invertValue = invertVal;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
 });
 
 /*sepia*/
+
 const sepiaBtn = document.querySelector(".sepia-apply");
 sepiaBtn.addEventListener("click", function () {
   var sepiaInput = document.querySelector(".sepia-input");
   var sepiaVal = sepiaInput.value;
   sepiaValue = sepiaVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
+});
+
+/*Hue*/
+
+const hueBtn = document.querySelector(".hue-apply");
+hueBtn.addEventListener("click", function () {
+  var hueInput = document.querySelector(".hue-input");
+  var hueVal = hueInput.value;
+  hueValue = hueVal;
+  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)hue-rotate(${hueValue}deg)invert(${invertValue}%)`;
 });
 
 /*opacity*/
@@ -101,16 +134,6 @@ rotateBtn.addEventListener("click", function () {
   rotateValue = rotateVal;
   console.log(rotateValue);
   img.style.transform = `rotate(${rotateValue}deg)scale(${scaleValue})skewX(${skewXValue}deg)skewY(${skewYValue}deg)`;
-});
-
-/*saturation*/
-
-const saturateBtn = document.querySelector(".saturate-apply");
-saturateBtn.addEventListener("click", function () {
-  var saturateInput = document.querySelector(".saturate-input");
-  var saturateVal = saturateInput.value;
-  saturateValue = saturateVal;
-  img.style.filter = `contrast(${contrastValue}%)grayscale(${grayValue}%)saturate(${saturateValue}%)blur(${blurValue}px)brightness(${brightValue}%)sepia(${sepiaValue}%)`;
 });
 
 /*scale*/
